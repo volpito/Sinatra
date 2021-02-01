@@ -1,5 +1,6 @@
 # Sinatra
 new sinatra gem
+
 Sinatra is a singer
 
 This is obvious
