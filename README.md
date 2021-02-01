@@ -14,6 +14,8 @@ So glad we got to grab THP's CEO's hands as they (or maybe just that good old Fe
 Not to get carried away but we did learn a LOT, but not quite as much as we would have wanted.
 The interface, not sexy as it is, is stil functional, and we hope you'll enjoy clicking on it as much as we had a litteral BLAST translating our brains farts into code.
 
+I went as far as 2.6.5 if you have to know
+
 Best regards,
 
 Us
