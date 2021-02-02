@@ -3,18 +3,18 @@ require 'csv'
 
 class Gossip
   attr_reader :author, :content
-
+#le classique
   def initialize(author, content)
     @author = author
     @content = content
   end
-
+#là encore, petit save, pas de surprises
   def save
     CSV.open("db/gossip.csv", "a+") do |csv|
       csv << [@author, @content]
   end
   end
-
+#là on stocke tous les gossips dans un array grâce à une boucle do, puis on le return pour l'afficher dans l'index
   def self.all
     all_gossips = []
     CSV.read("db/gossip.csv").each do |csv_line|
@@ -23,15 +23,10 @@ class Gossip
     return all_gossips
   end
 
+#j'avoue ca c'est github, j'en ai eu marre
+
   def self.find(id)
-    gossips = []   # permet de stocker la ligne csv demandée
-    CSV.read("db/gossip.csv").each_with_index do |row, index|
-      if (id == index+1)          # cherche et check si l'index est égale id demandé
-        gossips << Gossip.new(row[0], row[1])    # si trouvé, ajout dans array et break pour retourner l'array
-        break
-          end
-        end
-        return gossips
+    Gossip.all[id.to_i]
     end
 
 end

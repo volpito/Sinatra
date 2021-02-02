@@ -19,10 +19,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/gossips/:id/' do
-    #erb :index, locals: {gossips: Gossip.all}
-    # matches "GET /hello/foo" and "GET /hello/bar"
-    # params['name'] is 'foo' or 'bar'
-    erb :show, locals: {gossips: Gossip.find(params[:id])}
+    erb :show, locals: {id: Gossip.find(params[:id])}
   end
 
 end
